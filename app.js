@@ -14,7 +14,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // connect mongoose
 const mongoose = require("mongoose");
-const createProxyMiddleware = require("http-proxy-middleware");
+const proxy = require("http-proxy-middleware");
 
 const options = {
   autoIndex: true, // Don't build indexes
@@ -29,33 +29,18 @@ mongoose.connect(
 var cors = require("cors");
 var app = express();
 
-const settingProxy = createProxyMiddleware({
-  target:
-    "https://admin-staycation-new.herokuapp.com/api/v1/member/landing-page",
+const settingProxy = proxy({
+  target: "https://admin-staycation-new.herokuapp.com",
   changeOrigin: true,
-  on: {
-    proxyReq: (proxyReq, req, res) => {
-      /* handle proxyReq */
-      console.log(res);
-    },
-    proxyRes: (proxyRes, req, res) => {
-      /* handle proxyRes */
-      console.log(res);
-    },
-    error: (err, req, res) => {
-      console.log(err);
-      /* handle error */
-    },
-  },
 });
 
 // var corsSettings = {
 //   origin: "http://localhost:3000",
 // };
 
-// used for anticipate access origin error
+// used for anticipate access origin erro
 // app.use(cors());
-app.use(settingProxy);
+app.use("/api/v1/member/landing-page", proxy());
 
 // --------------------------------------------------- CORS SETTINGS
 
