@@ -45,13 +45,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ramiouse/bwamern-server-staycation.git"
+    "url": "git+https://github.com/ramiouse/app-server-staycation.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ramiouse/bwamern-server-staycation/issues"
+    "url": "https://github.com/ramiouse/app-server-staycation/issues"
   },
   "description": "",
   "devDependencies": {
