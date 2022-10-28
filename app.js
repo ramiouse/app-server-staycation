@@ -14,7 +14,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // connect mongoose
 const mongoose = require("mongoose");
-// const createProxyMiddleware = require("http-proxy-middleware");
+const createProxyMiddleware = require("http-proxy-middleware");
 
 const options = {
   autoIndex: true, // Don't build indexes
