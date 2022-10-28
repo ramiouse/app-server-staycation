@@ -53,7 +53,6 @@
   "bugs": {
     "url": "https://github.com/ramiouse/bwamern-server-staycation/issues"
   },
-  "homepage": "https://github.com/ramiouse/bwamern-server-staycation#readme",
   "description": "",
   "devDependencies": {
     "http-proxy-middleware": "^2.0.6"
