@@ -54,7 +54,7 @@ var app = express();
 // };
 
 // used for anticipate access origin error
-// app.use(cors(corsSettings));
+app.use(cors());
 // app.use(settingProxy);
 
 // --------------------------------------------------- CORS SETTINGS
