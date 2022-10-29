@@ -29,22 +29,6 @@ mongoose.connect(
 var cors = require("cors");
 var app = express();
 
-// const settingProxy = createProxyMiddleware("/api/v1/member/landing-page", {
-//   target: "https://admin-staycation-new.herokuapp.com",
-//   changeOrigin: true,
-// });
-
-// var corsSettings = {
-//   origin: "http://localhost:3000",
-// };
-
-app.use(
-  createProxyMiddleware("/api/v1/member/landing-page", {
-    target: "https://admin-staycation-new.herokuapp.com",
-    changeOrigin: true,
-  })
-);
-
 // used for anticipate access origin erro
 app.use(cors());
 // app.use(settingProxy);
