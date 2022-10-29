@@ -30,7 +30,7 @@ var cors = require("cors");
 var app = express();
 
 // used for anticipate access origin erro
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors());
 // app.use(settingProxy);
 
 // --------------------------------------------------- CORS SETTINGS
