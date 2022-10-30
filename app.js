@@ -26,14 +26,7 @@ mongoose.connect(
   options
 );
 
-var cors = require("cors");
 var app = express();
-
-// used for anticipate access origin erro
-// app.use(cors());
-// app.use(settingProxy);
-
-// --------------------------------------------------- CORS SETTINGS
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users"); // router users
