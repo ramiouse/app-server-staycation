@@ -26,9 +26,9 @@ mongoose.connect(
   options
 );
 
-var cors = require("cors");
+// var cors = require("cors");
 var app = express();
-app.use(cors());
+// app.use(cors());
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users"); // router users
