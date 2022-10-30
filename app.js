@@ -26,8 +26,9 @@ mongoose.connect(
   options
 );
 
-var app = express();
 var cors = require("cors");
+var app = express();
+app.use(cors());
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users"); // router users
@@ -38,7 +39,6 @@ const apiRouter = require("./routes/api"); // router admin
 // APP SETTING MODULE
 //-----------------------------------------------------------------------------
 
-app.use(cors());
 // setting default acces for "views" folder
 app.set("views", path.join(__dirname, "views"));
 // setup & use "view engine"
